@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Motion Planning for a Mobile Manipulation Robot Pushing a Cart</title>
+    <title>Point Cloud Feature Detection</title>
     <meta name="description" content="Case study page of Project" />
 
     <link rel="stylesheet" href="css/style.css" />
@@ -139,16 +139,13 @@
     </header>
     <section class="project-cs-hero">
       <div class="project-cs-hero__content">
-        <h1 class="heading-primary">Motion Planning for a Mobile Manipulation Robot Pushing a Cart  </h1>
+        <h1 class="heading-primary">Point Cloud Feature Detection</h1>
         <div class="project-cs-hero__info">
           <p class="text-primary">
-            Implemented A* (baseline), Dynamic Multi-Heuristic A*, ADA*, 
-            and Bi2RRT* for a mobile robot with a nonholonomic base. Evaluated algorithm 
-            performance in a 2D dynamic environment, showcasing advanced planning techniques.
+            Performed convolution using a mask over a depth image to find 
+            a shape profile that suits the gripper’s shape. Utilized libraries 
+            like OpenCV and Point Cloud Library (PCL).
           </p>
-        </div>
-        <div class="project-cs-hero__cta">
-          <a href="#" class="btn btn--bg" target="_blank">Live Link</a>
         </div>
       </div>
     </section>
@@ -157,7 +154,7 @@
         <div class="project-details__content">
           <div class="project-details__showcase-img-cont">
             <img
-              src="./assets/png/Screenshot from 2025-01-14 02-53-31.png"
+              src="./assets/png/pcd_proj.png"
               alt="Project Image"
               class="project-details__showcase-img"
             />
@@ -166,46 +163,37 @@
             <div class="project-details__desc">
               <h3 class="project-details__content-title">Project Overview</h3>
               <p class="project-details__desc-para">
-                The purpose of this project was to implement and 
-                compare the different navigation algorithms for a mobile 
-                manipulation system. This system included a mobile base and two 
-                manipulator arm unit that work together to navigate through a 
-                dynamic environment while pushing a cart. The project was 
-                demonstrated in a 2D setting in which a non-holonomic robot 
-                pushes a holonomic cart. To solve the path planning problem, the 
-                study applied four distinct motion planning algorithms, namely A* 
-                (the baseline), ADA*, MHA*, and Bi2RRT*. These algorithms 
-                consider the movement (kinodynamic) constraints of the robot 
-                system and compute a collision-free trajectory between the start 
-                and endpoint of the robot's motion. The performance of these algorithms 
-                was compared on the system using various evaluation metrics. 
+                This project focuses on detecting profiles in 3D point clouds that match 
+                the geometry of a parallel jaw gripper for robotic grasping. Using C++ and 
+                the Point Cloud Library (PCL), point clouds were generated from RGB and depth 
+                images captured by a camera rotating 360 degrees. Distance thresholding was applied 
+                to filter irrelevant points, followed by segmentation to isolate objects in the scene. 
+                A custom convolution operation was performed directly on the point clouds, analyzing 
+                spatial patterns to identify features resembling the gripper's profile. This approach 
+                provided a robust method for detecting graspable regions on objects.
               </p>
-            
+              <p class="project-details__desc-para">
+                This project is private and thus the repository is not accessible publicly.
+              </p>
             </div>
             <div class="project-details__tools-used">
               <h3 class="project-details__content-title">Tools Used</h3>
               <div class="skills">
-                <div class="skills__skill">Python</div>
-                <div class="skills__skill">PyGame</div>
-                <div class="skills__skill">Research Writing</div>
-                <div class="skills__skill">GIT</div>
+                <div class="skills__skill">OpenCV</div>
+                <div class="skills__skill">C++</div>
+                <div class="skills__skill">Point Cloud Library(PCL)</div>
+                <div class="skills__skill">ROS2</div>
+                <div class="skills__skill">Linux</div>
               </div>
             </div>
-            <div class="project-details__links">
-              <h3 class="project-details__content-title">See Live</h3>
+            <!--<div class="project-details__links">
               <a
                 href="#"
-                class="btn btn--med btn--theme project-details__links-btn"
-                target="_blank"
-                >Live Link</a
-              >
-              <a
-                href="https://github.com/Ironman2314532/Cart-Pushing-with-a-Mobile-Manipulation-System"
                 class="btn btn--med btn--theme-inv project-details__links-btn"
                 target="_blank"
                 >Code Link</a
               >
-            </div>
+            </div> -->
           </div>
         </div>
       </div>
@@ -218,7 +206,7 @@
               <span>Social</span>
             </h2>
             <div class="main-footer__social-cont">
-              <a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/thira-patel-6010211a2/">
+              <a target="_blank" rel="noreferrer" href="#">
                 <img
                   class="main-footer__icon"
                   src="./assets/png/linkedin-ico.png"
@@ -259,8 +247,8 @@
             <h4 class="heading heading-sm text-lt">Thira Patel</h4>
             <p class="main-footer__short-desc">
               Robotics Engineer interested in the field of Robotic Manipulation 
-              and Motion Planning. Apart from this I am a self taught blogger 
-              and creative writer. I also crochet!
+              and Motion Planning. Apart from this I am a self taught blogger and 
+              creative writer. I also crochet!
             </p>
           </div>
         </div>
@@ -269,7 +257,7 @@
           &copy; Copyright 2021. Made by
           <a rel="noreferrer" target="_blank" href="https://rammaheshwari.com"
             >Ram Maheshwari</a
-          >
+          > 
         </div>-->
       </div>
     </footer>
