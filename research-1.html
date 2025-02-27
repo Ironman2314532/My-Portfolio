@@ -166,16 +166,23 @@
             <div class="project-details__desc">
               <h3 class="project-details__content-title">Project Overview</h3>
               <p class="project-details__desc-para">
-                This study explores 2 novel path-planning and task-planning strategies for In-Hand manipulation of cuboidal objects
-                with custom dimensions. Two distinct approaches were developed: a 2D method and a 3D method. The 2D approach involved
-                unfolding the object onto a plane and employing a modified A*
-                algorithm for planning. In contrast, the 3D approach utilized a 3D
-                graph representation of the object, further discretizing it before
-                applying another version of the modified A* algorithm. However,
-                the 2D planner faced limitations in representing connections
-                between adjacent object surfaces due to the unfolding process.
-                Conversely, the 3D planner addressed this issue, resulting in
-                highly optimized solutions for both path and task planning.
+                This study explores two novel path-planning and task-planning strategies for in-hand manipulation of 
+                objects using a Variable Friction Gripper. Two distinct approaches were developed: a 2D method and a 3D method. 
+                The 2D approach involved unfolding the object's surface onto a plane and employing a modified A* algorithm for 
+                motion planning. However, this method faced limitations in accurately representing transitions between adjacent 
+                object surfaces due to the inherent constraints of the unfolding process. In contrast, the 3D approach utilized 
+                a graph-based volumetric representation of the object, discretizing it into a finite set of states before 
+                applying an optimized variant of the A* algorithm. This method effectively preserved surface connectivity and 
+                spatial relationships, leading to highly efficient path and task-planning solutions.
+              </p>
+              <p class="project-details__desc-para">
+                In addition to algorithmic advancements, mechanical design improvements were introduced to enhance the Variable 
+                Friction Gripper's durability and performance. The CAD model of the gripper was modified to achieve better stress 
+                distribution across its components, reducing localized stress concentrations and mitigating premature gear wear. 
+                These structural enhancements contributed to improved longevity and operational reliability. Furthermore, 
+                significant software development was undertaken to structure the gripper’s codebase, establishing a hierarchy of 
+                functionalities ranging from low-level motor control to high-level planning and execution. This modular 
+                architecture enables more efficient integration of planning algorithms, facilitating precise and adaptive in-hand manipulation.
               </p>
               <p class="project-details__desc-para">
                 This research was conducted under the guidance of Professor Berk Calli, for Manipulation and Environmental 
